@@ -1,0 +1,98 @@
+---
+og_site_name: Bricks on Central
+---
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% if page.full_title %}
+    <title>{{ page.full_title }}</title>
+    {% else %}
+    <title>{{ page.title }} &mdash; {{site.meta.title}}</title>
+    {% endif %}
+    <meta name="description" content="{{ site.meta.description }}">
+    <meta name="author" content="{{ site.meta.author.name }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{{site.url}}/css/boilerplate.css">
+    <link rel="stylesheet" href="{{site.url}}/css/style.css">
+    <link rel="stylesheet" href="{{site.url}}/css/helpers.css">
+    <script src="{{site.url}}/js/libs/modernizr-2.0.6.min.js"></script>
+    <meta property="og:locale" content="en_US" />
+    {% if page.og_title %}<meta property="og:title" content="{{page.og_title}}"/>
+    {% else %}<meta property="og:title" content="{{page.title}}" />
+    {% endif %}
+    {% if page.og_url %}<meta property="og:url" content="{{page.og_url}}"/>
+    {% endif %}
+    {% if page.og_description %}<meta property="og:description" content="{{page.og_description}}"/>
+    {% endif %}
+    {% if page.og_type %}<meta property="og:type" content="{{page.og_type}}"/>
+    {% endif %}
+    {% if page.og_image %}<meta property="og:image" content="{{site.url}}{{page.og_image}}"/>
+    {% endif %}
+    {% if page.og_image_width %}<meta property="og:image:width" content="{{page.og_image_width}}"/>
+    {% endif %}
+    {% if page.og_image_height %}<meta property="og:image:height" content="{{page.og_image_height}}"/>
+    {% endif %}
+    {% if page.og_image_type %}<meta property="og:image:type" content="{{page.og_image_type}}"/>
+    {% endif %}
+</head>
+<body>
+    <header class="site">
+        <div class="name-and-location clearfix">
+            <div class="name"><a href="{{site.url}}/">Bricks on Central</a></div>
+            <div class="location">
+                <div class="address">400 East Central</div>
+                <div class="city-state">Minot, ND</div>
+            </div>
+        </div>
+        <div class="pretty-navigation">
+            <ul class="photos">
+                <li class="building-photo photo-000"><a href="{{site.url}}/images/building-000-2x.png">Photo</a></li>
+                <li class="building-photo photo-001"><a href="{{site.url}}/images/building-001-2x.png">Photo</a></li>
+                <li class="building-photo photo-002"><a href="{{site.url}}/images/building-002-2x.png">Photo</a></li>
+                <li class="building-photo photo-003"><a href="{{site.url}}/images/building-003-2x.png">Photo</a></li>
+                <li class="building-photo photo-004"><a href="{{site.url}}/images/building-004-2x.png">Photo</a></li>
+            </ul>
+        </div>
+        <nav id="primary-site-navigation">
+            <div class="navigation">
+                <ul>
+                    <li><a href="{{site.url}}/" class="{% if page.nav_context == 'index' %} current {% endif %}">Building Directory</a></li>
+                    <li><a href="{{site.url}}/location" class="{% if page.nav_context == 'location' %} current {% endif %}">Location</a></li>
+                    <li><a href="{{site.url}}/photos" class="{% if page.nav_context == 'photos' %} current {% endif %}">Photos</a></li>
+                    <li><a href="{{site.url}}/about" class="{% if page.nav_context == 'about' %} current {% endif %}">About</a></li>
+                    <li><a href="https://www.facebook.com/pages/Bricks-on-Central/117051651703625">Facebook</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    {{ content }}
+    <footer class="site">
+        <div class="legal">
+            <div class="copyright">&copy;Bricks on Central, 2007-2012</div>
+            <div class="all-rights-reserved">All Rights Reserved</div>
+        </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{site.url}}/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+    <script defer src="{{site.url}}/js/plugins.js"></script>
+    <script defer src="{{site.url}}/js/script.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27709903-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>
