@@ -284,7 +284,7 @@ header.site ul.photos li.building-photo.photo-004 a {
 #content .building-photos li img {
     margin: .15em 0;
     max-width: 100%;
-    width: auto !important;
+    width: auto;
     height: auto !important;
 }
 

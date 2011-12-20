@@ -1,4 +1,4 @@
-(function($) {
+$(function() {
 
     var retina = false;
     if(Modernizr.mq('only screen and (-webkit-min-device-pixel-ratio: 2)')) {
@@ -28,9 +28,7 @@
                 src = retina ? $image.attr('src-320x2') : $image.attr('src-320');
             }
             if ( src != $image.attr('src') ) {
-                if ( width < $image.attr('width') ) {
-                    // We should do nothing here.
-                } else {
+                if ( $image.attr('width') == undefined || width > $image.attr('width') ) {
                     updates.push([$image, src, width, height]);
                 }
             }
@@ -40,8 +38,8 @@
                 var update = updates[i];
                 var $image = update[0];
                 $image.attr('src', update[1]);
-                $image.attr('width', update[2]);
-                $image.attr('height', update[3]);
+                $image.attr('width', update[2]).width(update[2]);
+                $image.attr('height', update[3]).height(update[3]);
             }
         }
 
@@ -59,4 +57,4 @@
         }, 2000);
     });
 
-})(jQuery);
+});
