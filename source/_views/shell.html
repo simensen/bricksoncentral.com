@@ -1,6 +1,3 @@
----
-og_site_name: Bricks on Central
----
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -70,7 +67,7 @@ og_site_name: Bricks on Central
             </div>
         </nav>
     </header>
-    {{ content }}
+    {% block content %}{% endblock %}
     <footer class="site">
         <div class="legal">
             <div class="copyright">&copy;Bricks on Central, 2007-2012</div>
